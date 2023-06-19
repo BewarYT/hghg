@@ -1,0 +1,31 @@
+﻿@page
+@model BewarMC.com.Pages.ContactModel
+@{
+    ViewData[Title] = "contact paage";
+}
+
+
+<hl>Contact Form</hl>
+
+@if(Model.hasData)
+{
+    <p>Hello @Model.firstName @Model.lastname</p>
+    <p>we got youre message dont worry:</p>
+    <p>@Model.message</p>
+}
+    
+
+<dev class="container">
+    <form method="POST">
+        <label for="fname">First Name</label><br>
+        <input type="text" id="lname" name="First Name"><br>
+
+        <label for="fname">Last Name</label><br>
+        <input type="text" id="lname" name="Last Name"><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" style="height:200px"></textarea><br>
+
+        <input type="submit" value="submit">
+        </form>
+        </dev>
